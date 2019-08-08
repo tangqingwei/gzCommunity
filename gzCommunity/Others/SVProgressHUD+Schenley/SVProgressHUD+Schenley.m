@@ -13,8 +13,8 @@
 +(void)schenleyShowInfoWithText:(NSString *)text{
     [self setInfoImage:[UIImage imageNamed:@"axxxa"]];
     [self setCornerRadius:3.0f];
-    [self setMinimumDismissTimeInterval:2.5f];
-    [self setMaximumDismissTimeInterval:3.0f];
+    [self setMinimumDismissTimeInterval:1.0f];
+    [self setMaximumDismissTimeInterval:1.5f];
     [self setDefaultStyle:SVProgressHUDStyleDark];
     [self setDefaultMaskType:SVProgressHUDMaskTypeBlack];
     [self showInfoWithStatus:text];

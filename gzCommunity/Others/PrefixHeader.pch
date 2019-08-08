@@ -9,7 +9,46 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+//设备型号
+#define IS_IPAD     [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad
+#define IS_IPHONE   [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone
+//5、5s、se
+#define IS_IPHONE_5 (fabs((double)[[UIScreen mainScreen] bounds].size.height - (double)568) < DBL_EPSILON )
+//6、6s、7、8
+#define IS_IPHONE_6 (fabs((double)[[UIScreen mainScreen] bounds].size.height - (double)667) < DBL_EPSILON )
+//6_plus、6s_plus、7_plus、8_plus
+#define IS_IPHONE_6_PLUS (fabs((double)[[UIScreen mainScreen] bounds].size.height - (double)736) < DBL_EPSILON )
+//X、X_S
+#define IS_IPHONE_X (fabs((double)[[UIScreen mainScreen] bounds].size.height - (double)812) < DBL_EPSILON )
+
+//X_SMAX、X_R
+#define IS_IPHONE_X_SMAX (fabs((double)[[UIScreen mainScreen] bounds].size.height - (double)896) < DBL_EPSILON )
+
+#define NAVIGATION_HEIGHT  CGFloat navigation_height; if(IS_IPHONE_X){\
+navigation_height = 88.0f;\
+}else if(IS_IPHONE_X_SMAX){\
+navigation_height = 88.0f;\
+}else{\
+navigation_height = 64.0f;\
+}\
+
+#define BOUNDS [UIScreen mainScreen].bounds
+#define WIDTH BOUNDS.size.width
+#define SCREEN_HEIGHT BOUNDS.size.height
+
+#define SAFE_HEIGHT CGFloat safe_height; if(IS_IPHONE_X){\
+safe_height = BOUNDS.size.height - 34.0;\
+}else if(IS_IPHONE_X_SMAX){\
+safe_height = BOUNDS.size.height - 34.0;\
+}else{\
+safe_height = BOUNDS.size.height;\
+}\
+
+#define autoXY(value) (fabs((double)[[UIScreen mainScreen] bounds].size.height - (double)667) < DBL_EPSILON ? 1.0 : [UIScreen mainScreen].bounds.size.width/375.0) * (value)
+
+#define BASE_URL @"http://www.guanzhuangwang.com"
+#define REQUEST_URL(detail_url) [NSString stringWithFormat:@"%@%@",BASE_URL,detail_url]
+
+#define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
 
 #endif /* PrefixHeader_pch */

@@ -22,10 +22,11 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
+//        154 215 94
         UIButton *firstButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [firstButton setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
         [firstButton setTitleColor:UIColor.whiteColor forState:UIControlStateSelected];
-        [firstButton setBackgroundImage:[UIImage imageWithColor:SCHENLEY_BASECOLOR] forState:UIControlStateSelected];
+        [firstButton setBackgroundImage:[UIImage imageWithColor:RGBA(154, 215, 94, 1.0)] forState:UIControlStateSelected];
         [firstButton setBackgroundImage:[UIImage imageWithColor:UIColor.whiteColor] forState:UIControlStateNormal];
         [firstButton addTarget:self action:@selector(firstButtonClick) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:firstButton];
@@ -34,7 +35,7 @@
         UIButton *secondButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [secondButton setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
         [secondButton setTitleColor:UIColor.whiteColor forState:UIControlStateSelected];
-        [secondButton setBackgroundImage:[UIImage imageWithColor:SCHENLEY_BASECOLOR] forState:UIControlStateSelected];
+        [secondButton setBackgroundImage:[UIImage imageWithColor:RGBA(154, 215, 94, 1.0)] forState:UIControlStateSelected];
         [secondButton setBackgroundImage:[UIImage imageWithColor:UIColor.whiteColor] forState:UIControlStateNormal];
         [secondButton addTarget:self action:@selector(secondButtonClick) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:secondButton];

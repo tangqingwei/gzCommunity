@@ -53,14 +53,7 @@
     [self addHTTPHeader:headerParameters];
     [self.manager POST:URL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         //校验是否token失效
-        NSDictionary *dataDic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
-        if ([dataDic[@"retCode"] integerValue] == -36) {
-            //退出
-            NSUserDefaults *userDefaults = NSUserDefaults.standardUserDefaults;
-            [userDefaults removeObjectForKey:USER_INFO];
-            NSNotification * signOutNotification = [NSNotification notificationWithName:SIGN_OUT_NOTIFICATION_NAME object:nil];
-            [[NSNotificationCenter defaultCenter] postNotification:signOutNotification];
-        }
+        
         [weakSelf successGlobalHandle:nil object:responseObject success:successBlock];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [weakSelf failureGlobalHandle:nil error:error failure:failureBlock];
@@ -130,11 +123,7 @@
     //    NSLog(@"通用请求错误：%@", error.localizedDescription);
     if ([self failureErroeHandle:error]) {
         if (failureBlock) {
-            if (error.code == -1009) {
-                [SVProgressHUD schenleyShowInfoWithText:@"请检查网络设置"];
-            }else{
-                failureBlock(error);
-            }
+            failureBlock(error);
         }
     }
 }

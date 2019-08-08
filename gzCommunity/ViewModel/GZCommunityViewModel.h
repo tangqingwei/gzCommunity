@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GZCommunityViewModel : NSObject
 
+- (void)createDataWithResult:(void (^) (id value))result failure:(void (^) (NSError *error))failure;
+
 @end
 
 NS_ASSUME_NONNULL_END

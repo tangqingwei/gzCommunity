@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CommunityCell : UICollectionViewCell
 
+@property (nonatomic, weak) UILabel *titleLabel;
+@property (nonatomic, weak) UILabel *dateLabel;
+
 @end
 
 NS_ASSUME_NONNULL_END

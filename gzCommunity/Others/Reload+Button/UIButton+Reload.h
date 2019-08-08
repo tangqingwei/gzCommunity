@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIButton (Reload)
 
++ (instancetype)reloadButton;
+
 @end
 
 NS_ASSUME_NONNULL_END

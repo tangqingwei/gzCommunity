@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString (Date)
 
+
++ (instancetype)dateStringWithSecondNumber:(NSNumber *)secondNumber;
+
 @end
 
 NS_ASSUME_NONNULL_END

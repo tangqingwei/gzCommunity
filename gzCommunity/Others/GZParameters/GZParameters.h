@@ -10,7 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GZParameters : NSDictionary
+@interface NSMutableDictionary (GZPsarameters)
+
++ (instancetype)parameters;
 
 @end
 

@@ -6,7 +6,8 @@
 //  Copyright © 2018年 sqhtech. All rights reserved.
 //
 
-#import <SVProgressHUD/SVProgressHUD.h>
+//#import <SVProgressHUD/SVProgressHUD.h>
+#import "SVProgressHUD.h"
 
 @interface SVProgressHUD (Schenley)
 

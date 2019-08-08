@@ -7,10 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString (Size)
+
+/**
+ 计算普通文本高度（不含换行符）
+ */
+- (CGFloat)calculateRowHeightWithWidth:(CGFloat)width fontSize:(NSInteger)fontSize;
+
+/**
+ 计算带换行符的文本高度
+ */
+- (CGFloat)lineBreak_calculateRowHeightWithWidth:(CGFloat)width fontSize:(NSInteger)fontSize;
 
 @end
 

@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CommunityListViewController : UIViewController
 
+@property (nonatomic, strong) NSNumber *boardId;
+@property (nonatomic, copy) NSString *boardName;
+
 @end
 
 NS_ASSUME_NONNULL_END

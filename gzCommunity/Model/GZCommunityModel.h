@@ -12,6 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GZCommunityModel : NSObject
 
+@property (nonatomic, strong) NSNumber *boardId;
+@property (nonatomic, copy) NSString *boardName;
+@property (nonatomic, strong) NSNumber *boardContent;
+@property (nonatomic, copy) NSString *lastPostsDate;
+
++ (instancetype)initWithDic:(NSDictionary *)dic;
+
 @end
 
 NS_ASSUME_NONNULL_END

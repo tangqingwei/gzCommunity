@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GZDetailImageCell : UITableViewCell
 
+@property (nonatomic, strong) UIImageView *contentImageView;
+@property (nonatomic, assign) CGSize imageSize;
+
 @end
 
 NS_ASSUME_NONNULL_END

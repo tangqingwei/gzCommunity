@@ -31,13 +31,7 @@
 
 - (instancetype)initWithRootViewController:(UIViewController *)rootViewController{
     if (self = [super initWithRootViewController:rootViewController]) {
-        if (IS_IPHONE_X || IS_IPHONE_X_SMAX) {
-            [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigation_bar_bg_x"] forBarMetrics:UIBarMetricsDefault];
-        }else if(IS_IPHONE_6_PLUS){
-            [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigation_bar_bg_p"] forBarMetrics:UIBarMetricsDefault];
-        }else{
-            [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigation_bar_bg"] forBarMetrics:UIBarMetricsDefault];
-        }
+        [self.navigationBar setBackgroundImage:[UIImage imageWithColor:UIColor.redColor] forBarMetrics:UIBarMetricsDefault];
         [self.navigationBar setShadowImage:[UIImage imageWithColor:UIColor.clearColor]];
         self.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:UIColor.whiteColor};
     }
