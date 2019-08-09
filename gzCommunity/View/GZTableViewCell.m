@@ -112,7 +112,6 @@
     self.ciViewS.frame = modelRect.ciViewSFrame;
     self.ciViewT.frame = modelRect.ciViewTFrame;
     
-    self.ciViewF.backgroundColor = UIColor.redColor;
 }
 
 - (void)awakeFromNib {

@@ -22,6 +22,8 @@
         contentLabel.numberOfLines = 0;
         [self.contentView addSubview:contentLabel];
         _contentLabel = contentLabel;
+        
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return self;
 }

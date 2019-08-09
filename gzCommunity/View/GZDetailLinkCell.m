@@ -19,6 +19,8 @@
         linkLabel.numberOfLines = 0;
         [self.contentView addSubview:linkLabel];
         _linkLabel = linkLabel;
+        
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return self;
 }

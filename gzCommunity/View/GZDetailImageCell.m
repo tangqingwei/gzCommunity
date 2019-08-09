@@ -23,6 +23,8 @@
         contentImageView.backgroundColor = UIColor.redColor;
         [self.contentView addSubview:contentImageView];
         _contentImageView = contentImageView;
+        
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return self;
 }

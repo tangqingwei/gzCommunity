@@ -17,6 +17,7 @@
 #import "GZDetailHeaderView.h"
 #import "UIImageView+WebCache.h"
 #import "NSString+Date.h"
+#import "WebViewController.h"
 
 @interface DetailViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -51,7 +52,7 @@
         CGFloat x = 0.0;
         CGFloat y = 0.0;
         CGFloat w = WIDTH;
-        CGFloat h = safe_height - y;
+        CGFloat h = safe_height - y - navigation_height;
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(x, y, w, h) style:UITableViewStyleGrouped];
         _tableView.delegate = self;
         _tableView.dataSource = self;
@@ -181,6 +182,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    //
+    NSDictionary *dic = self.contentArray[indexPath.row];
+    if ([dic[@"type"] integerValue] == 4){
+        WebViewController *vc = [[WebViewController alloc] init];
+        NSLog(@"%@",dic[@"url"]);
+        vc.urlStr = dic[@"url"];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 @end

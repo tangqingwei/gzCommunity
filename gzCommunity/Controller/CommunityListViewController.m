@@ -26,7 +26,7 @@
     if (_tableView == nil) {
         SAFE_HEIGHT;
         NAVIGATION_HEIGHT;
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, safe_height) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, safe_height - navigation_height) style:UITableViewStylePlain];
         //        _tableView.backgroundColor = ;
         _tableView.delegate = self;
         _tableView.dataSource = self;

@@ -30,7 +30,7 @@
         self.contentFrame = CGRectMake(CGRectGetMinX(self.iconFrame), CGRectGetMaxY(self.titleFrame), WIDTH - 16.0, contentH);
         totalHeight = CGRectGetMaxY(self.contentFrame) + 12.0;
         NSLog(@"--------%ld",model.imageList.count);
-        if (model.imageList.count != 0) {
+        if (model.imageList.count > 1) {
             CGFloat imagesSpace = 8.0;
             CGFloat imageW = (titleW - imagesSpace * 2.0) * 0.333333;
             CGFloat imageH = imageW;

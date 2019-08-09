@@ -110,6 +110,8 @@
 		0BCEB0F222FB24DA0033BA67 /* SVProgressHUD+Schenley.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCEB0F022FB24DA0033BA67 /* SVProgressHUD+Schenley.m */; };
 		0BCEB0F522FB26FC0033BA67 /* SchenleyNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCEB0F422FB26FC0033BA67 /* SchenleyNavigationController.m */; };
 		0BCEB0FC22FBAE7C0033BA67 /* UIButton+Reload.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCEB0FB22FBAE7C0033BA67 /* UIButton+Reload.m */; };
+		0BCEB10522FD19D70033BA67 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCEB10422FD19D70033BA67 /* WebViewController.m */; };
+		0BCEB10922FD1BBA0033BA67 /* WeakScriptMessageDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCEB10822FD1BBA0033BA67 /* WeakScriptMessageDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -343,6 +345,10 @@
 		0BCEB0F422FB26FC0033BA67 /* SchenleyNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchenleyNavigationController.m; sourceTree = "<group>"; };
 		0BCEB0FA22FBAE7C0033BA67 /* UIButton+Reload.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Reload.h"; sourceTree = "<group>"; };
 		0BCEB0FB22FBAE7C0033BA67 /* UIButton+Reload.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Reload.m"; sourceTree = "<group>"; };
+		0BCEB10322FD19D70033BA67 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		0BCEB10422FD19D70033BA67 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		0BCEB10722FD1BBA0033BA67 /* WeakScriptMessageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeakScriptMessageDelegate.h; sourceTree = "<group>"; };
+		0BCEB10822FD1BBA0033BA67 /* WeakScriptMessageDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeakScriptMessageDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -476,6 +482,8 @@
 				0BCEB0DA22FB18A20033BA67 /* CommunityListViewController.m */,
 				0B7F88E122F1E0230019E850 /* DetailViewController.h */,
 				0B7F88E222F1E0230019E850 /* DetailViewController.m */,
+				0BCEB10322FD19D70033BA67 /* WebViewController.h */,
+				0BCEB10422FD19D70033BA67 /* WebViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -528,6 +536,7 @@
 		0B7F88E922F541A60019E850 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				0BCEB10622FD1B940033BA67 /* WeekScriptMessageDelegate */,
 				0BCEB0F622FBAD9B0033BA67 /* Reload+Button */,
 				0BCEB0EF22FB24DA0033BA67 /* SVProgressHUD+Schenley */,
 				0B7F89C422F69EC00019E850 /* NSString+Size */,
@@ -797,6 +806,15 @@
 			path = "Reload+Button";
 			sourceTree = "<group>";
 		};
+		0BCEB10622FD1B940033BA67 /* WeekScriptMessageDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				0BCEB10722FD1BBA0033BA67 /* WeakScriptMessageDelegate.h */,
+				0BCEB10822FD1BBA0033BA67 /* WeakScriptMessageDelegate.m */,
+			);
+			path = WeekScriptMessageDelegate;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -929,6 +947,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B7F89BB22F696C30019E850 /* SDWeakProxy.m in Sources */,
+				0BCEB10522FD19D70033BA67 /* WebViewController.m in Sources */,
 				0B7F88FA22F54D230019E850 /* AFNetworkingSchenley.m in Sources */,
 				0B7F88E022F1E0050019E850 /* CommunityViewController.m in Sources */,
 				0B7F899F22F696C30019E850 /* SDDiskCache.m in Sources */,
@@ -937,6 +956,7 @@
 				0B7F89BA22F696C30019E850 /* SDImageAssetManager.m in Sources */,
 				0B7F889522F1DBD30019E850 /* ViewController.m in Sources */,
 				0B7F88D922F1DFA20019E850 /* AFNetworkReachabilityManager.m in Sources */,
+				0BCEB10922FD1BBA0033BA67 /* WeakScriptMessageDelegate.m in Sources */,
 				0B7F89B622F696C30019E850 /* UIButton+WebCache.m in Sources */,
 				0B7F88A022F1DBD50019E850 /* main.m in Sources */,
 				0B7F89B922F696C30019E850 /* SDImageCachesManagerOperation.m in Sources */,
