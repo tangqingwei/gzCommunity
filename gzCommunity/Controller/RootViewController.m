@@ -9,6 +9,7 @@
 #import "RootViewController.h"
 #import "HomeViewController.h"
 #import "CommunityViewController.h"
+#import "LoginViewController.h"
 #import "SegmentView.h"
 
 @interface RootViewController ()<UIPageViewControllerDelegate,UIPageViewControllerDataSource, SegmentViewDelegate>
@@ -28,7 +29,7 @@
         _segementView.delegate = self;
         _segementView.titles = self.segementTitles;
         NAVIGATION_HEIGHT;
-        _segementView.frame = CGRectMake(0, 0, WIDTH * 0.6, 40);
+        _segementView.frame = CGRectMake(0, 0, WIDTH * 0.5, 40);
     }
     return _segementView;
 }
@@ -75,6 +76,20 @@
     self.pageViewController.view.frame = CGRectMake(x, y, width, height);
     [self.view addSubview:self.pageViewController.view];
     
+    UIButton *iconButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    iconButton.frame = CGRectMake(0, 0, autoXY(40.0), autoXY(40.0));
+    [iconButton setImage:[UIImage imageNamed:@"me"] forState:UIControlStateNormal];
+    iconButton.layer.cornerRadius = autoXY(20.0);
+    iconButton.layer.masksToBounds = YES;
+    [iconButton addTarget:self action:@selector(iconButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:iconButton];
+    self.navigationItem.rightBarButtonItem = rightItem;
+    
+}
+
+- (void)iconButtonClick{
+    LoginViewController *vc = [[LoginViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - UIPageViewControllerDataSource

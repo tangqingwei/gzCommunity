@@ -98,6 +98,8 @@
 		0B7F89D322F9BDAF0019E850 /* GZDetailLinkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F89D222F9BDAF0019E850 /* GZDetailLinkCell.m */; };
 		0B7F89D622F9C3A40019E850 /* GZDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F89D522F9C3A40019E850 /* GZDetailHeaderView.m */; };
 		0B7F89D922FA76330019E850 /* CommunityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F89D822FA76330019E850 /* CommunityCell.m */; };
+		0B9463B1230126000076205C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9463B0230126000076205C /* LoginViewController.m */; };
+		0B9463B42301298D0076205C /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9463B32301298D0076205C /* LoginView.m */; };
 		0BCEB0D522FB0B5D0033BA67 /* GZCommunityViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCEB0D422FB0B5D0033BA67 /* GZCommunityViewModel.m */; };
 		0BCEB0D822FB0BDD0033BA67 /* GZCommunityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCEB0D722FB0BDD0033BA67 /* GZCommunityModel.m */; };
 		0BCEB0DB22FB18A20033BA67 /* CommunityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCEB0DA22FB18A20033BA67 /* CommunityListViewController.m */; };
@@ -321,6 +323,10 @@
 		0B7F89D522F9C3A40019E850 /* GZDetailHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GZDetailHeaderView.m; sourceTree = "<group>"; };
 		0B7F89D722FA76330019E850 /* CommunityCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityCell.h; sourceTree = "<group>"; };
 		0B7F89D822FA76330019E850 /* CommunityCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityCell.m; sourceTree = "<group>"; };
+		0B9463AF230126000076205C /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		0B9463B0230126000076205C /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		0B9463B22301298D0076205C /* LoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		0B9463B32301298D0076205C /* LoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
 		0BCEB0D322FB0B5D0033BA67 /* GZCommunityViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GZCommunityViewModel.h; sourceTree = "<group>"; };
 		0BCEB0D422FB0B5D0033BA67 /* GZCommunityViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GZCommunityViewModel.m; sourceTree = "<group>"; };
 		0BCEB0D622FB0BDD0033BA67 /* GZCommunityModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GZCommunityModel.h; sourceTree = "<group>"; };
@@ -484,6 +490,8 @@
 				0B7F88E222F1E0230019E850 /* DetailViewController.m */,
 				0BCEB10322FD19D70033BA67 /* WebViewController.h */,
 				0BCEB10422FD19D70033BA67 /* WebViewController.m */,
+				0B9463AF230126000076205C /* LoginViewController.h */,
+				0B9463B0230126000076205C /* LoginViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -504,6 +512,8 @@
 				0B7F89D522F9C3A40019E850 /* GZDetailHeaderView.m */,
 				0B7F89D722FA76330019E850 /* CommunityCell.h */,
 				0B7F89D822FA76330019E850 /* CommunityCell.m */,
+				0B9463B22301298D0076205C /* LoginView.h */,
+				0B9463B32301298D0076205C /* LoginView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -950,6 +960,7 @@
 				0BCEB10522FD19D70033BA67 /* WebViewController.m in Sources */,
 				0B7F88FA22F54D230019E850 /* AFNetworkingSchenley.m in Sources */,
 				0B7F88E022F1E0050019E850 /* CommunityViewController.m in Sources */,
+				0B9463B1230126000076205C /* LoginViewController.m in Sources */,
 				0B7F899F22F696C30019E850 /* SDDiskCache.m in Sources */,
 				0B7F89AC22F696C30019E850 /* SDImageGraphics.m in Sources */,
 				0B7F89AD22F696C30019E850 /* SDImageCacheDefine.m in Sources */,
@@ -1006,6 +1017,7 @@
 				0B7F89BF22F696C30019E850 /* UIColor+HexString.m in Sources */,
 				0B7F89A522F696C30019E850 /* SDWebImageDownloaderOperation.m in Sources */,
 				0B7F89B222F696C30019E850 /* SDWebImageOptionsProcessor.m in Sources */,
+				0B9463B42301298D0076205C /* LoginView.m in Sources */,
 				0B7F899322F696C30019E850 /* SDWebImageIndicator.m in Sources */,
 				0B7F899622F696C30019E850 /* UIImage+MultiFormat.m in Sources */,
 				0B7F898722F696C30019E850 /* NSImage+Compatibility.m in Sources */,
@@ -1215,16 +1227,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/gzCommunity/Others/PrefixHeader.pch";
 				INFOPLIST_FILE = gzCommunity/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qige.gzCommunity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1232,16 +1248,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = SYVCJTHJBC;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/gzCommunity/Others/PrefixHeader.pch";
 				INFOPLIST_FILE = gzCommunity/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qige.gzCommunity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE_SPECIFIER = gzCommunityDistribution;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
