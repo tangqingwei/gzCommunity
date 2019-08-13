@@ -9,6 +9,10 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+#import "SVProgressHUD+Schenley.h"
+#import "GZParameters.h"
+#import "AFNetworkingSchenley.h"
+
 //设备型号
 #define IS_IPAD     [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad
 #define IS_IPHONE   [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone
@@ -50,5 +54,8 @@ safe_height = BOUNDS.size.height;\
 #define REQUEST_URL(detail_url) [NSString stringWithFormat:@"%@%@",BASE_URL,detail_url]
 
 #define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+
+
+#define USER_INFO @"userInfo"
 
 #endif /* PrefixHeader_pch */

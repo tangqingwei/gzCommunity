@@ -10,7 +10,9 @@
 #import "HomeViewController.h"
 #import "CommunityViewController.h"
 #import "LoginViewController.h"
+#import "InfoViewController.h"
 #import "SegmentView.h"
+#import "UIButton+WebCache.h"
 
 @interface RootViewController ()<UIPageViewControllerDelegate,UIPageViewControllerDataSource, SegmentViewDelegate>
 
@@ -18,10 +20,22 @@
 @property (nonatomic, strong) NSArray<UIViewController *> *vcDataSource;
 @property (nonatomic, assign) NSInteger selectedIndex;
 @property (nonatomic, strong) SegmentView *segementView;
+@property (nonatomic, weak) UIButton *itemButton;
 
 @end
 
 @implementation RootViewController
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *dic = [userDefaults objectForKey:USER_INFO];
+    if (dic != nil) {
+        [self.itemButton sd_setImageWithURL:[NSURL URLWithString:dic[@"avatar"]] forState:UIControlStateNormal];
+    }else{
+        [self.itemButton setBackgroundImage:[UIImage imageNamed:@"me"] forState:UIControlStateNormal];
+    }
+}
 
 - (SegmentView *)segementView{
     if (_segementView == nil) {
@@ -77,19 +91,29 @@
     [self.view addSubview:self.pageViewController.view];
     
     UIButton *iconButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    iconButton.frame = CGRectMake(0, 0, autoXY(40.0), autoXY(40.0));
-    [iconButton setImage:[UIImage imageNamed:@"me"] forState:UIControlStateNormal];
-    iconButton.layer.cornerRadius = autoXY(20.0);
+    iconButton.frame = CGRectMake(0, 0, autoXY(32.0), autoXY(32.0));
+    [iconButton setBackgroundImage:[UIImage imageNamed:@"me"] forState:UIControlStateNormal];
+    iconButton.layer.cornerRadius = autoXY(16.0);
     iconButton.layer.masksToBounds = YES;
     [iconButton addTarget:self action:@selector(iconButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    [iconButton setBackgroundColor:UIColor.greenColor];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:iconButton];
     self.navigationItem.rightBarButtonItem = rightItem;
+    _itemButton = iconButton;
     
 }
 
 - (void)iconButtonClick{
-    LoginViewController *vc = [[LoginViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *dic = [userDefaults objectForKey:USER_INFO];
+    if (dic == nil) {
+        LoginViewController *vc = [[LoginViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else{
+        InfoViewController *vc = [[InfoViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    
 }
 
 #pragma mark - UIPageViewControllerDataSource

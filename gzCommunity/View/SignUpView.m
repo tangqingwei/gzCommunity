@@ -1,14 +1,14 @@
 //
-//  LoginView.m
+//  SignUpView.m
 //  gzCommunity
 //
 //  Created by qige on 2019/8/12.
 //  Copyright © 2019 qige. All rights reserved.
 //
 
-#import "LoginView.h"
+#import "SignUpView.h"
 
-@interface LoginView()
+@interface SignUpView()
 
 @property (nonatomic, weak) UILabel *unLabel;
 @property (nonatomic, weak) UITextField *unTextField;
@@ -16,12 +16,11 @@
 @property (nonatomic, weak) UILabel *passwordLabel;
 @property (nonatomic, weak) UITextField *passwordTextField;
 
-@property (nonatomic, weak) UIButton *loginButton;
 @property (nonatomic, weak) UIButton *signUpButton;
 
 @end
 
-@implementation LoginView
+@implementation SignUpView
 
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
@@ -58,27 +57,20 @@
         [self addSubview:passwordTextField];
         _passwordTextField = passwordTextField;
         
-        UIButton *loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        loginButton.backgroundColor = UIColor.redColor;
-        [loginButton setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
-        [loginButton setTitle:@"登录" forState:UIControlStateNormal];
-        [loginButton addTarget:self action:@selector(loginButtonClkick) forControlEvents:UIControlEventTouchUpInside];
-        loginButton.layer.cornerRadius = 4.0f;
-        loginButton.layer.masksToBounds = YES;
-        [self addSubview:loginButton];
-        _loginButton = loginButton;
-        
         UIButton *signUpButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [signUpButton setTitleColor:RGBA(154, 215, 94, 1.0) forState:UIControlStateNormal];
-        [signUpButton.titleLabel setFont:[UIFont systemFontOfSize:13.0]];
-        [signUpButton.titleLabel setTextAlignment:NSTextAlignmentLeft];
-        [signUpButton setTitle:@"注册账号" forState:UIControlStateNormal];
-        [signUpButton addTarget:self action:@selector(signUpButtonEvent) forControlEvents:UIControlEventTouchDown];
+        signUpButton.backgroundColor = UIColor.redColor;
+        [signUpButton setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+        [signUpButton setTitle:@"注册" forState:UIControlStateNormal];
+        [signUpButton addTarget:self action:@selector(signUpButtonClkick) forControlEvents:UIControlEventTouchUpInside];
+        signUpButton.layer.cornerRadius = 4.0f;
+        signUpButton.layer.masksToBounds = YES;
         [self addSubview:signUpButton];
         _signUpButton = signUpButton;
+        
     }
     return self;
 }
+
 
 - (void)layoutSubviews{
     [super layoutSubviews];
@@ -108,27 +100,14 @@
     CGFloat lbY = CGRectGetMaxY(self.passwordTextField.frame) + 100.0;
     CGFloat lbW = width - lbX * 2;
     CGFloat lbH = 46.0;
-    self.loginButton.frame = CGRectMake(lbX, lbY, lbW, lbH);
-    
-    CGFloat subX = lbX;
-    CGFloat subY = CGRectGetMaxY(self.loginButton.frame) + 8.0;
-    CGFloat subW = 72.0;
-    CGFloat subH = 18.0;
-    self.signUpButton.frame = CGRectMake(subX, subY, subW, subH);
+    self.signUpButton.frame = CGRectMake(lbX, lbY, lbW, lbH);
 }
 
-- (void)loginButtonClkick{
-    if ([self.delegate respondsToSelector:@selector(loginViewLoginEventWithUsername:password:)]) {
+- (void)signUpButtonClkick{
+    if ([self.delegate respondsToSelector:@selector(signUpLoginEventWithUsername:password:)]) {
         NSString *username = self.unTextField.text;
         NSString *password = self.passwordTextField.text;
-        [self.delegate loginViewLoginEventWithUsername:username password:password];
-    }
-}
-
-
-- (void)signUpButtonEvent{
-    if ([self.delegate respondsToSelector:@selector(loginViewSignUpEvent)]) {
-        [self.delegate loginViewSignUpEvent];
+        [self.delegate signUpLoginEventWithUsername:username password:password];
     }
 }
 

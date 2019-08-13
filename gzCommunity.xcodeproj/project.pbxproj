@@ -100,6 +100,10 @@
 		0B7F89D922FA76330019E850 /* CommunityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F89D822FA76330019E850 /* CommunityCell.m */; };
 		0B9463B1230126000076205C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9463B0230126000076205C /* LoginViewController.m */; };
 		0B9463B42301298D0076205C /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9463B32301298D0076205C /* LoginView.m */; };
+		0B9463B72301AFF60076205C /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9463B62301AFF60076205C /* SignUpViewController.m */; };
+		0B9463BA2301B01E0076205C /* SignUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9463B92301B01E0076205C /* SignUpView.m */; };
+		0B9463BD2301B7840076205C /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9463BC2301B7840076205C /* InfoViewController.m */; };
+		0B9463C02301B89F0076205C /* InfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9463BF2301B89F0076205C /* InfoView.m */; };
 		0BCEB0D522FB0B5D0033BA67 /* GZCommunityViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCEB0D422FB0B5D0033BA67 /* GZCommunityViewModel.m */; };
 		0BCEB0D822FB0BDD0033BA67 /* GZCommunityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCEB0D722FB0BDD0033BA67 /* GZCommunityModel.m */; };
 		0BCEB0DB22FB18A20033BA67 /* CommunityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCEB0DA22FB18A20033BA67 /* CommunityListViewController.m */; };
@@ -327,6 +331,14 @@
 		0B9463B0230126000076205C /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		0B9463B22301298D0076205C /* LoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
 		0B9463B32301298D0076205C /* LoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		0B9463B52301AFF60076205C /* SignUpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		0B9463B62301AFF60076205C /* SignUpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		0B9463B82301B01E0076205C /* SignUpView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpView.h; sourceTree = "<group>"; };
+		0B9463B92301B01E0076205C /* SignUpView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpView.m; sourceTree = "<group>"; };
+		0B9463BB2301B7840076205C /* InfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		0B9463BC2301B7840076205C /* InfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		0B9463BE2301B89F0076205C /* InfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoView.h; sourceTree = "<group>"; };
+		0B9463BF2301B89F0076205C /* InfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoView.m; sourceTree = "<group>"; };
 		0BCEB0D322FB0B5D0033BA67 /* GZCommunityViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GZCommunityViewModel.h; sourceTree = "<group>"; };
 		0BCEB0D422FB0B5D0033BA67 /* GZCommunityViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GZCommunityViewModel.m; sourceTree = "<group>"; };
 		0BCEB0D622FB0BDD0033BA67 /* GZCommunityModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GZCommunityModel.h; sourceTree = "<group>"; };
@@ -492,6 +504,10 @@
 				0BCEB10422FD19D70033BA67 /* WebViewController.m */,
 				0B9463AF230126000076205C /* LoginViewController.h */,
 				0B9463B0230126000076205C /* LoginViewController.m */,
+				0B9463B52301AFF60076205C /* SignUpViewController.h */,
+				0B9463B62301AFF60076205C /* SignUpViewController.m */,
+				0B9463BB2301B7840076205C /* InfoViewController.h */,
+				0B9463BC2301B7840076205C /* InfoViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -514,6 +530,10 @@
 				0B7F89D822FA76330019E850 /* CommunityCell.m */,
 				0B9463B22301298D0076205C /* LoginView.h */,
 				0B9463B32301298D0076205C /* LoginView.m */,
+				0B9463B82301B01E0076205C /* SignUpView.h */,
+				0B9463B92301B01E0076205C /* SignUpView.m */,
+				0B9463BE2301B89F0076205C /* InfoView.h */,
+				0B9463BF2301B89F0076205C /* InfoView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -994,6 +1014,8 @@
 				0BCEB0D822FB0BDD0033BA67 /* GZCommunityModel.m in Sources */,
 				0B7F88F222F54B860019E850 /* UIView+Corner.m in Sources */,
 				0B7F88C422F1DDB20019E850 /* RootViewController.m in Sources */,
+				0B9463C02301B89F0076205C /* InfoView.m in Sources */,
+				0B9463B72301AFF60076205C /* SignUpViewController.m in Sources */,
 				0B7F89B122F696C30019E850 /* SDWebImageDefine.m in Sources */,
 				0B7F89A422F696C30019E850 /* SDImageFrame.m in Sources */,
 				0B7F899522F696C30019E850 /* SDImageCodersManager.m in Sources */,
@@ -1035,6 +1057,7 @@
 				0BCEB0DB22FB18A20033BA67 /* CommunityListViewController.m in Sources */,
 				0B7F88F622F54C1C0019E850 /* UIImage+ColorImage.m in Sources */,
 				0B7F899B22F696C30019E850 /* SDWebImagePrefetcher.m in Sources */,
+				0B9463BA2301B01E0076205C /* SignUpView.m in Sources */,
 				0B7F899722F696C30019E850 /* SDMemoryCache.m in Sources */,
 				0B7F899022F696C30019E850 /* SDWebImageDownloader.m in Sources */,
 				0B7F89A722F696C30019E850 /* SDImageCachesManager.m in Sources */,
@@ -1052,6 +1075,7 @@
 				0B7F898822F696C30019E850 /* SDAnimatedImageView+WebCache.m in Sources */,
 				0B7F89D622F9C3A40019E850 /* GZDetailHeaderView.m in Sources */,
 				0B7F89A822F696C30019E850 /* SDWebImageTransition.m in Sources */,
+				0B9463BD2301B7840076205C /* InfoViewController.m in Sources */,
 				0B7F89C322F698CB0019E850 /* NSString+Date.m in Sources */,
 				0B7F88D822F1DFA20019E850 /* AFURLRequestSerialization.m in Sources */,
 				0B7F89A322F696C30019E850 /* SDImageGIFCoder.m in Sources */,

@@ -10,7 +10,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol LoginViewDelegate <NSObject>
+
+- (void)loginViewLoginEventWithUsername:(NSString *)username password:(NSString *)password;
+- (void)loginViewSignUpEvent;
+
+@end
+
 @interface LoginView : UIView
+
+@property (nonatomic, weak) id<LoginViewDelegate> delegate;
 
 @end
 
