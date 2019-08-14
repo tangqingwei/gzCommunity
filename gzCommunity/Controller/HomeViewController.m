@@ -126,6 +126,7 @@
     vc.topicId = model.sourceId;
     vc.boardId = model.boardId;
     vc.boardName = model.boardName;
+    vc.userId = model.userId;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

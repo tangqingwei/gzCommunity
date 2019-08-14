@@ -10,12 +10,22 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol GZDetailHeaderViewDelegate <NSObject>
+
+- (void)detailHeaderViewAttenEvent;
+
+@end
+
+
 @interface GZDetailHeaderView : UIView
 
+@property (nonatomic, weak) id<GZDetailHeaderViewDelegate> delegate;
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UIImageView *iconView;
 @property (nonatomic, strong) UILabel *userNickNameLabel;
 @property (nonatomic, strong) UILabel *dateLabel;
+
+@property (nonatomic, assign) BOOL isFollow;
 
 @end
 

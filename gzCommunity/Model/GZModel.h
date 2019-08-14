@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSURL *userAvatar;
 @property (nonatomic, strong) NSArray *imageList;
 @property (nonatomic, strong) NSNumber *topicId;
+@property (nonatomic, copy) NSString *userId;
 
 + (instancetype)initWithDic:(NSDictionary *)dic;
 

@@ -10,7 +10,22 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
+@protocol InfoViewDelegate <NSObject>
+
+- (void)infoViewLogoutButtonEvent;
+- (void)infoViewDeSelectedIndexPath:(NSIndexPath *)indexPath;
+
+@end
+
 @interface InfoView : UIView
+
+@property (nonatomic, weak) id<InfoViewDelegate> delegate;
+@property (nonatomic, weak) UILabel *unLabel;
+@property (nonatomic, weak) UIButton *logoutButton;
+@property (nonatomic, weak) UIImageView *iconView;
+
+@property (nonatomic, strong) NSArray *dataArray;
 
 @end
 

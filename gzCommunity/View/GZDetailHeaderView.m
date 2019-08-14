@@ -8,6 +8,12 @@
 
 #import "GZDetailHeaderView.h"
 
+@interface GZDetailHeaderView()
+
+@property (nonatomic, weak) UIButton *attenButton;
+
+@end
+
 @implementation GZDetailHeaderView
 
 - (instancetype)initWithFrame:(CGRect)frame{
@@ -36,15 +42,32 @@
         [self addSubview:dateLabel];
         _dateLabel = dateLabel;
         
+        UIButton *attenButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [attenButton setBackgroundColor:UIColor.redColor];
+        [attenButton setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+        [attenButton.titleLabel setFont:[UIFont systemFontOfSize:12.0]];
+        [attenButton setTitle:@"关注" forState:UIControlStateNormal];
+        [attenButton setTitle:@"已关注" forState:UIControlStateSelected];
+        attenButton.layer.cornerRadius = 2.0;
+        attenButton.layer.masksToBounds = YES;
+        [attenButton addTarget:self action:@selector(attenButtonClick) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:attenButton];
+        _attenButton = attenButton;
+        
         self.backgroundColor = UIColor.whiteColor;
     }
     return self;
 }
 
 
+- (void)setIsFollow:(BOOL)isFollow{
+    self.attenButton.selected = isFollow;
+}
+
 - (void)layoutSubviews{
     [super layoutSubviews];
     CGFloat width = self.bounds.size.width;
+//    CGFloat height = self.bounds.size.height;
     CGFloat titleX = 8.0;
     CGFloat titleY = 8.0;
     CGFloat titleW = width - 2 * titleX;
@@ -65,6 +88,18 @@
     CGFloat dateW = 100;
     CGFloat dateH = 18.0;
     self.dateLabel.frame = CGRectMake(dateX, dateY, dateW, dateH);
+    CGFloat abW = 42.0;
+    CGFloat abH = 18.0;
+    CGFloat abX = width - abW - 12.0;
+    CGFloat abY = nameY + 4.0;
+    self.attenButton.frame = CGRectMake(abX, abY, abW, abH);
+}
+
+
+- (void)attenButtonClick{
+    if ([self.delegate respondsToSelector:@selector(detailHeaderViewAttenEvent)]) {
+        [self.delegate detailHeaderViewAttenEvent];
+    }
 }
 
 @end

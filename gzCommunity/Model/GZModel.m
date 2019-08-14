@@ -24,6 +24,7 @@
     model.imageList = dic[@"imageList"];
     model.boardId = dic[@"board_id"];
     model.topicId = dic[@"topic_id"];
+    model.userId = dic[@"user_id"];
     return model;
 }
 

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B28B9222302B3EE00A6B1D4 /* GZCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B28B9212302B3EE00A6B1D4 /* GZCommentCell.m */; };
+		0B28B9252302B6EE00A6B1D4 /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B28B9242302B6EE00A6B1D4 /* CommentViewController.m */; };
+		0B28B9292302C0CE00A6B1D4 /* UITextView+PlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B28B9272302C0CE00A6B1D4 /* UITextView+PlaceHolder.m */; };
+		0B28B92C2302FD6C00A6B1D4 /* GZAttentionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B28B92B2302FD6C00A6B1D4 /* GZAttentionCell.m */; };
 		0B7F889222F1DBD30019E850 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F889122F1DBD30019E850 /* AppDelegate.m */; };
 		0B7F889522F1DBD30019E850 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7F889422F1DBD30019E850 /* ViewController.m */; };
 		0B7F889822F1DBD30019E850 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B7F889622F1DBD30019E850 /* Main.storyboard */; };
@@ -138,6 +142,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B28B9202302B3EE00A6B1D4 /* GZCommentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GZCommentCell.h; sourceTree = "<group>"; };
+		0B28B9212302B3EE00A6B1D4 /* GZCommentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GZCommentCell.m; sourceTree = "<group>"; };
+		0B28B9232302B6EE00A6B1D4 /* CommentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentViewController.h; sourceTree = "<group>"; };
+		0B28B9242302B6EE00A6B1D4 /* CommentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentViewController.m; sourceTree = "<group>"; };
+		0B28B9272302C0CE00A6B1D4 /* UITextView+PlaceHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+PlaceHolder.m"; sourceTree = "<group>"; };
+		0B28B9282302C0CE00A6B1D4 /* UITextView+PlaceHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+PlaceHolder.h"; sourceTree = "<group>"; };
+		0B28B92A2302FD6C00A6B1D4 /* GZAttentionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GZAttentionCell.h; sourceTree = "<group>"; };
+		0B28B92B2302FD6C00A6B1D4 /* GZAttentionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GZAttentionCell.m; sourceTree = "<group>"; };
 		0B7F888D22F1DBD30019E850 /* gzCommunity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gzCommunity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B7F889022F1DBD30019E850 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0B7F889122F1DBD30019E850 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -394,6 +406,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B28B9262302C0CE00A6B1D4 /* UITextView+PlaceHolder */ = {
+			isa = PBXGroup;
+			children = (
+				0B28B9272302C0CE00A6B1D4 /* UITextView+PlaceHolder.m */,
+				0B28B9282302C0CE00A6B1D4 /* UITextView+PlaceHolder.h */,
+			);
+			path = "UITextView+PlaceHolder";
+			sourceTree = "<group>";
+		};
 		0B7F888422F1DBD30019E850 = {
 			isa = PBXGroup;
 			children = (
@@ -508,6 +529,8 @@
 				0B9463B62301AFF60076205C /* SignUpViewController.m */,
 				0B9463BB2301B7840076205C /* InfoViewController.h */,
 				0B9463BC2301B7840076205C /* InfoViewController.m */,
+				0B28B9232302B6EE00A6B1D4 /* CommentViewController.h */,
+				0B28B9242302B6EE00A6B1D4 /* CommentViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -518,6 +541,8 @@
 				0B7F88EB22F549CA0019E850 /* SegmentView */,
 				0B7F88FF22F55A430019E850 /* GZTableViewCell.h */,
 				0B7F890022F55A430019E850 /* GZTableViewCell.m */,
+				0B28B9202302B3EE00A6B1D4 /* GZCommentCell.h */,
+				0B28B9212302B3EE00A6B1D4 /* GZCommentCell.m */,
 				0B7F89C822F881E50019E850 /* GZDetailTextCell.h */,
 				0B7F89C922F881E50019E850 /* GZDetailTextCell.m */,
 				0B7F89CB22F881FB0019E850 /* GZDetailImageCell.h */,
@@ -534,6 +559,8 @@
 				0B9463B92301B01E0076205C /* SignUpView.m */,
 				0B9463BE2301B89F0076205C /* InfoView.h */,
 				0B9463BF2301B89F0076205C /* InfoView.m */,
+				0B28B92A2302FD6C00A6B1D4 /* GZAttentionCell.h */,
+				0B28B92B2302FD6C00A6B1D4 /* GZAttentionCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -566,6 +593,7 @@
 		0B7F88E922F541A60019E850 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				0B28B9262302C0CE00A6B1D4 /* UITextView+PlaceHolder */,
 				0BCEB10622FD1B940033BA67 /* WeekScriptMessageDelegate */,
 				0BCEB0F622FBAD9B0033BA67 /* Reload+Button */,
 				0BCEB0EF22FB24DA0033BA67 /* SVProgressHUD+Schenley */,
@@ -1005,11 +1033,14 @@
 				0B7F89B722F696C30019E850 /* SDWebImageDownloaderRequestModifier.m in Sources */,
 				0B7F89B822F696C30019E850 /* MKAnnotationView+WebCache.m in Sources */,
 				0B7F898D22F696C30019E850 /* SDAnimatedImageView.m in Sources */,
+				0B28B92C2302FD6C00A6B1D4 /* GZAttentionCell.m in Sources */,
 				0B7F899E22F696C30019E850 /* SDImageIOCoder.m in Sources */,
+				0B28B9222302B3EE00A6B1D4 /* GZCommentCell.m in Sources */,
 				0BCEB0ED22FB24730033BA67 /* SVIndefiniteAnimatedView.m in Sources */,
 				0B7F899D22F696C30019E850 /* NSButton+WebCache.m in Sources */,
 				0B7F890422F567040019E850 /* GZViewModel.m in Sources */,
 				0BCEB0EC22FB24730033BA67 /* SVProgressHUD.m in Sources */,
+				0B28B9252302B6EE00A6B1D4 /* CommentViewController.m in Sources */,
 				0B7F899222F696C30019E850 /* SDWebImageCacheSerializer.m in Sources */,
 				0BCEB0D822FB0BDD0033BA67 /* GZCommunityModel.m in Sources */,
 				0B7F88F222F54B860019E850 /* UIView+Corner.m in Sources */,
@@ -1029,6 +1060,7 @@
 				0B7F88D622F1DFA20019E850 /* AFHTTPSessionManager.m in Sources */,
 				0B7F898E22F696C30019E850 /* UIImage+ForceDecode.m in Sources */,
 				0B7F89CD22F881FB0019E850 /* GZDetailImageCell.m in Sources */,
+				0B28B9292302C0CE00A6B1D4 /* UITextView+PlaceHolder.m in Sources */,
 				0B7F899822F696C30019E850 /* SDWebImageCompat.m in Sources */,
 				0B7F88DD22F1DFEA0019E850 /* HomeViewController.m in Sources */,
 				0B7F89AB22F696C30019E850 /* UIImageView+WebCache.m in Sources */,

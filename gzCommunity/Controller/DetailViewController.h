@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSNumber *boardId;
 @property (nonatomic, strong) NSNumber *topicId;
 @property (nonatomic, copy) NSString *boardName;
+@property (nonatomic, copy) NSString *userId;
 
 @end
 

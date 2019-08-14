@@ -31,9 +31,11 @@
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSDictionary *dic = [userDefaults objectForKey:USER_INFO];
     if (dic != nil) {
-        [self.itemButton sd_setImageWithURL:[NSURL URLWithString:dic[@"avatar"]] forState:UIControlStateNormal];
+        [self.itemButton setImage:[UIImage imageNamed:@"me_ed"] forState:UIControlStateNormal];
+//        [self.itemButton sd_setImageWithURL:[NSURL URLWithString:dic[@"avatar"]] forState:UIControlStateNormal];
     }else{
-        [self.itemButton setBackgroundImage:[UIImage imageNamed:@"me"] forState:UIControlStateNormal];
+        [self.itemButton setImage:[UIImage imageNamed:@"me"] forState:UIControlStateNormal];
+//        [self.itemButton setBackgroundImage:[UIImage imageNamed:@"me"] forState:UIControlStateNormal];
     }
 }
 
@@ -92,11 +94,12 @@
     
     UIButton *iconButton = [UIButton buttonWithType:UIButtonTypeCustom];
     iconButton.frame = CGRectMake(0, 0, autoXY(32.0), autoXY(32.0));
-    [iconButton setBackgroundImage:[UIImage imageNamed:@"me"] forState:UIControlStateNormal];
+//    [iconButton setBackgroundImage:[UIImage imageNamed:@"me"] forState:UIControlStateNormal];
+    [iconButton setImage:[UIImage imageNamed:@"me"] forState:UIControlStateNormal];
     iconButton.layer.cornerRadius = autoXY(16.0);
     iconButton.layer.masksToBounds = YES;
     [iconButton addTarget:self action:@selector(iconButtonClick) forControlEvents:UIControlEventTouchUpInside];
-    [iconButton setBackgroundColor:UIColor.greenColor];
+//    [iconButton setBackgroundColor:UIColor.greenColor];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:iconButton];
     self.navigationItem.rightBarButtonItem = rightItem;
     _itemButton = iconButton;

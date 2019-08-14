@@ -18,13 +18,16 @@
 #import "UIImageView+WebCache.h"
 #import "NSString+Date.h"
 #import "WebViewController.h"
+#import "LoginViewController.h"
+#import "CommentViewController.h"
 
-@interface DetailViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface DetailViewController ()<UITableViewDelegate, UITableViewDataSource, GZDetailHeaderViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *contentArray;
 @property (nonatomic, strong) NSMutableDictionary *imageSizeDic;
 @property (nonatomic, strong) GZDetailHeaderView *headerView;
+@property (nonatomic, strong) UIButton *commentButton;
 
 @end
 
@@ -40,6 +43,7 @@
 - (GZDetailHeaderView *)headerView{
     if (_headerView == nil) {
         _headerView = [[GZDetailHeaderView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 100)];
+        _headerView.delegate = self;
     }
     return _headerView;
 }
@@ -70,7 +74,41 @@
     self.navigationItem.title = self.boardName;
     
     [self.view addSubview:self.tableView];
+    
+//    UIButton *commentButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [commentButton.titleLabel setFont:[UIFont systemFontOfSize:14.0]];
+//    [commentButton setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+//    [commentButton setTitle:@"评论" forState:UIControlStateNormal];
+//    [commentButton setBackgroundColor:UIColor.redColor];
+//    commentButton.layer.cornerRadius = 4.0;
+//    commentButton.layer.masksToBounds = YES;
+//    [commentButton addTarget:self action:@selector(commentButtonEvent) forControlEvents:UIControlEventTouchUpInside];
+//    SAFE_HEIGHT;
+//    NAVIGATION_HEIGHT;
+//    CGFloat cbW = 72.0f;
+//    CGFloat cbH = 32.0f;
+//    CGFloat cbX = (WIDTH - cbW) * 0.5;
+//    CGFloat cbY = safe_height - cbH - navigation_height;
+//    commentButton.frame = CGRectMake(cbX, cbY, cbW, cbH);
+//    [self.view addSubview:commentButton];
+    
     [self createData];
+}
+
+
+- (void)commentButtonEvent{
+//    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+//    NSDictionary *dic = [userDefaults objectForKey:USER_INFO];
+//    if (dic == nil) {
+//        LoginViewController *vc = [[LoginViewController alloc] init];
+//        [self.navigationController pushViewController:vc animated:YES];
+//    }else{
+//        CommentViewController *vc = [[CommentViewController alloc] init];
+//        [self.navigationController pushViewController:vc animated:YES];
+//    }
+    
+    CommentViewController *vc = [[CommentViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
@@ -81,6 +119,12 @@
     parameters[@"topicId"]=self.topicId;
     parameters[@"boardId"]=self.boardId;
     parameters[@"order"] = @0;
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *infoDic = [userDefaults objectForKey:USER_INFO];
+    if (infoDic != nil) {
+        parameters[@"accessToken"] = infoDic[@"token"];
+        parameters[@"accessSecret"] = infoDic[@"secret"];
+    }
     [[AFNetworkingSchenley sharedInstance] requestWithPOST:REQUEST_URL(@"/mobcent/app/web/index.php?r=forum/postlist") parameters:parameters success:^(NSData *responseObject) {
         NSDictionary *rootDic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
         NSLog(@"%@",rootDic);
@@ -89,6 +133,7 @@
         self.headerView.userNickNameLabel.text = rootDic[@"topic"][@"user_nick_name"];
         self.headerView.dateLabel.text = [NSString dateStringWithSecondNumber:rootDic[@"topic"][@"create_date"]];
         self.contentArray = rootDic[@"topic"][@"content"];
+        self.headerView.isFollow = [rootDic[@"topic"][@"isFollow"] boolValue];
         [self.tableView reloadData];
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
@@ -190,6 +235,33 @@
         vc.urlStr = dic[@"url"];
         [self.navigationController pushViewController:vc animated:YES];
     }
+}
+
+
+#pragma mark - GZDetailHeaderViewDelegate
+- (void)detailHeaderViewAttenEvent{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *dic = [userDefaults objectForKey:USER_INFO];
+    if (dic == nil) {
+        LoginViewController *vc = [[LoginViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+        return;
+    }
+    
+    //http://www.guanzhuangwang.com/mobcent/app/web/index.php?r=user/useradmin
+    NSMutableDictionary *parameters = [NSMutableDictionary parameters];
+    parameters[@"uid"]=self.userId;
+    parameters[@"type"]=@"follow";
+    parameters[@"accessToken"] = dic[@"token"];
+    parameters[@"accessSecret"] = dic[@"secret"];
+    [[AFNetworkingSchenley sharedInstance] requestWithPOST:REQUEST_URL(@"/mobcent/app/web/index.php?r=user/useradmin") parameters:parameters success:^(NSData *responseObject) {
+        NSDictionary *rootDic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+        NSLog(@"%@",rootDic);
+        [SVProgressHUD schenleyShowInfoWithText:rootDic[@"head"][@"errInfo"]];
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+    
 }
 
 @end
