@@ -12,6 +12,7 @@
 #import "SVProgressHUD+Schenley.h"
 #import "GZParameters.h"
 #import "AFNetworkingSchenley.h"
+#import "UIView+Frame.h"
 
 //设备型号
 #define IS_IPAD     [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad

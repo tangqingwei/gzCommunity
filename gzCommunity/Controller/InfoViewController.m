@@ -9,16 +9,31 @@
 #import "InfoViewController.h"
 #import "InfoView.h"
 #import "UIImageView+WebCache.h"
+#import "RABAlbumAlertView.h"
+#import "PMViewController.h"
 
-@interface InfoViewController ()<InfoViewDelegate>
+@interface InfoViewController ()<InfoViewDelegate,RABAlbumAlertViewDelegate>
 
 @property (nonatomic, strong) InfoView *infoView;
 @property (nonatomic, strong) NSArray *dataArray;
+@property (nonatomic, strong) RABAlbumAlertView *alertView;
 
 @end
 
 @implementation InfoViewController
 
+- (RABAlbumAlertView *)alertView{
+    if (_alertView == nil) {
+        _alertView = [[RABAlbumAlertView alloc] init];
+        _alertView.delegate = self;
+    }
+    return _alertView;
+}
+
+
+- (NSArray *)classArray{
+    return @[@"管庄新闻",@"学校教育",@"管庄房价",@"房屋车位",@"办事指南",@"活动报名",@"活动相册",@"二手闲置",@"周边商家",@"论坛公告"];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -52,8 +67,19 @@
     logoutButton.layer.cornerRadius = 4.0f;
     logoutButton.layer.masksToBounds = YES;
     logoutButton.frame = CGRectMake(0, 0, 42, 36);
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:logoutButton];
-    self.navigationItem.rightBarButtonItem = rightItem;
+    UIBarButtonItem *rightItem1 = [[UIBarButtonItem alloc] initWithCustomView:logoutButton];
+    
+    UIButton *pmButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    pmButton.backgroundColor = UIColor.redColor;
+    [pmButton setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+    [pmButton setTitle:@"发帖" forState:UIControlStateNormal];
+    [pmButton addTarget:self action:@selector(pmButtonClkick) forControlEvents:UIControlEventTouchUpInside];
+    pmButton.layer.cornerRadius = 4.0f;
+    pmButton.layer.masksToBounds = YES;
+    pmButton.frame = CGRectMake(0, 0, 42, 36);
+    UIBarButtonItem *rightItem2 = [[UIBarButtonItem alloc] initWithCustomView:pmButton];
+    
+    self.navigationItem.rightBarButtonItems = @[rightItem1, rightItem2];
     
     [self createData];
 }
@@ -93,6 +119,11 @@
     NSLog(@"注销");
 }
 
+- (void)pmButtonClkick{
+    //TODO
+    [self.alertView showWithArray:self.classArray];
+}
+
 #pragma mark - InfoViewDelegate
 - (void)infoViewLogoutButtonEvent{
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
@@ -119,5 +150,13 @@
         NSLog(@"%@",error);
     }];
 }
+
+#pragma mark -- RABAlbumAlertViewDelegate
+- (void)albumAlertViewDidSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    PMViewController *vc = [[PMViewController alloc] init];
+    vc.tag = self.classArray[indexPath.row];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 
 @end

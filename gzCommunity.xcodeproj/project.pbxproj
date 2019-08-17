@@ -108,6 +108,9 @@
 		0B9463BA2301B01E0076205C /* SignUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9463B92301B01E0076205C /* SignUpView.m */; };
 		0B9463BD2301B7840076205C /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9463BC2301B7840076205C /* InfoViewController.m */; };
 		0B9463C02301B89F0076205C /* InfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9463BF2301B89F0076205C /* InfoView.m */; };
+		0B9FB74C2306A7DC001E9D18 /* RABAlbumAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9FB74B2306A7DC001E9D18 /* RABAlbumAlertView.m */; };
+		0B9FB74F2306B185001E9D18 /* RABClassListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9FB74E2306B185001E9D18 /* RABClassListCollectionViewCell.m */; };
+		0B9FB7532306B21E001E9D18 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9FB7512306B21E001E9D18 /* UIView+Frame.m */; };
 		0BCEB0D522FB0B5D0033BA67 /* GZCommunityViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCEB0D422FB0B5D0033BA67 /* GZCommunityViewModel.m */; };
 		0BCEB0D822FB0BDD0033BA67 /* GZCommunityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCEB0D722FB0BDD0033BA67 /* GZCommunityModel.m */; };
 		0BCEB0DB22FB18A20033BA67 /* CommunityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCEB0DA22FB18A20033BA67 /* CommunityListViewController.m */; };
@@ -122,6 +125,7 @@
 		0BCEB0FC22FBAE7C0033BA67 /* UIButton+Reload.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCEB0FB22FBAE7C0033BA67 /* UIButton+Reload.m */; };
 		0BCEB10522FD19D70033BA67 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCEB10422FD19D70033BA67 /* WebViewController.m */; };
 		0BCEB10922FD1BBA0033BA67 /* WeakScriptMessageDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCEB10822FD1BBA0033BA67 /* WeakScriptMessageDelegate.m */; };
+		0BF359142307A39D00CC8035 /* PMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF359132307A39D00CC8035 /* PMViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -351,6 +355,12 @@
 		0B9463BC2301B7840076205C /* InfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		0B9463BE2301B89F0076205C /* InfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoView.h; sourceTree = "<group>"; };
 		0B9463BF2301B89F0076205C /* InfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoView.m; sourceTree = "<group>"; };
+		0B9FB74A2306A7DC001E9D18 /* RABAlbumAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RABAlbumAlertView.h; sourceTree = "<group>"; };
+		0B9FB74B2306A7DC001E9D18 /* RABAlbumAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RABAlbumAlertView.m; sourceTree = "<group>"; };
+		0B9FB74D2306B185001E9D18 /* RABClassListCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RABClassListCollectionViewCell.h; sourceTree = "<group>"; };
+		0B9FB74E2306B185001E9D18 /* RABClassListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RABClassListCollectionViewCell.m; sourceTree = "<group>"; };
+		0B9FB7512306B21E001E9D18 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		0B9FB7522306B21E001E9D18 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		0BCEB0D322FB0B5D0033BA67 /* GZCommunityViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GZCommunityViewModel.h; sourceTree = "<group>"; };
 		0BCEB0D422FB0B5D0033BA67 /* GZCommunityViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GZCommunityViewModel.m; sourceTree = "<group>"; };
 		0BCEB0D622FB0BDD0033BA67 /* GZCommunityModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GZCommunityModel.h; sourceTree = "<group>"; };
@@ -379,6 +389,8 @@
 		0BCEB10422FD19D70033BA67 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		0BCEB10722FD1BBA0033BA67 /* WeakScriptMessageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeakScriptMessageDelegate.h; sourceTree = "<group>"; };
 		0BCEB10822FD1BBA0033BA67 /* WeakScriptMessageDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeakScriptMessageDelegate.m; sourceTree = "<group>"; };
+		0BF359122307A39D00CC8035 /* PMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMViewController.h; sourceTree = "<group>"; };
+		0BF359132307A39D00CC8035 /* PMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -529,6 +541,8 @@
 				0B9463B62301AFF60076205C /* SignUpViewController.m */,
 				0B9463BB2301B7840076205C /* InfoViewController.h */,
 				0B9463BC2301B7840076205C /* InfoViewController.m */,
+				0BF359122307A39D00CC8035 /* PMViewController.h */,
+				0BF359132307A39D00CC8035 /* PMViewController.m */,
 				0B28B9232302B6EE00A6B1D4 /* CommentViewController.h */,
 				0B28B9242302B6EE00A6B1D4 /* CommentViewController.m */,
 			);
@@ -538,6 +552,7 @@
 		0B7F88E522F1E2EB0019E850 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0B9FB7492306A78D001E9D18 /* CollectionAlertView */,
 				0B7F88EB22F549CA0019E850 /* SegmentView */,
 				0B7F88FF22F55A430019E850 /* GZTableViewCell.h */,
 				0B7F890022F55A430019E850 /* GZTableViewCell.m */,
@@ -593,6 +608,7 @@
 		0B7F88E922F541A60019E850 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				0B9FB7502306B21E001E9D18 /* UIView+Frame */,
 				0B28B9262302C0CE00A6B1D4 /* UITextView+PlaceHolder */,
 				0BCEB10622FD1B940033BA67 /* WeekScriptMessageDelegate */,
 				0BCEB0F622FBAD9B0033BA67 /* Reload+Button */,
@@ -829,6 +845,26 @@
 			path = "NSString+Size";
 			sourceTree = "<group>";
 		};
+		0B9FB7492306A78D001E9D18 /* CollectionAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				0B9FB74D2306B185001E9D18 /* RABClassListCollectionViewCell.h */,
+				0B9FB74E2306B185001E9D18 /* RABClassListCollectionViewCell.m */,
+				0B9FB74A2306A7DC001E9D18 /* RABAlbumAlertView.h */,
+				0B9FB74B2306A7DC001E9D18 /* RABAlbumAlertView.m */,
+			);
+			path = CollectionAlertView;
+			sourceTree = "<group>";
+		};
+		0B9FB7502306B21E001E9D18 /* UIView+Frame */ = {
+			isa = PBXGroup;
+			children = (
+				0B9FB7512306B21E001E9D18 /* UIView+Frame.m */,
+				0B9FB7522306B21E001E9D18 /* UIView+Frame.h */,
+			);
+			path = "UIView+Frame";
+			sourceTree = "<group>";
+		};
 		0BCEB0DF22FB24730033BA67 /* SVProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -1028,6 +1064,7 @@
 				0B7F89AF22F696C30019E850 /* SDImageCacheConfig.m in Sources */,
 				0BCEB0EB22FB24730033BA67 /* SVProgressAnimatedView.m in Sources */,
 				0B7F89A122F696C30019E850 /* SDWebImageDownloaderConfig.m in Sources */,
+				0B9FB7532306B21E001E9D18 /* UIView+Frame.m in Sources */,
 				0B7F898A22F696C30019E850 /* SDWebImageManager.m in Sources */,
 				0B7F899122F696C30019E850 /* SDImageLoader.m in Sources */,
 				0B7F89B722F696C30019E850 /* SDWebImageDownloaderRequestModifier.m in Sources */,
@@ -1035,8 +1072,10 @@
 				0B7F898D22F696C30019E850 /* SDAnimatedImageView.m in Sources */,
 				0B28B92C2302FD6C00A6B1D4 /* GZAttentionCell.m in Sources */,
 				0B7F899E22F696C30019E850 /* SDImageIOCoder.m in Sources */,
+				0B9FB74C2306A7DC001E9D18 /* RABAlbumAlertView.m in Sources */,
 				0B28B9222302B3EE00A6B1D4 /* GZCommentCell.m in Sources */,
 				0BCEB0ED22FB24730033BA67 /* SVIndefiniteAnimatedView.m in Sources */,
+				0B9FB74F2306B185001E9D18 /* RABClassListCollectionViewCell.m in Sources */,
 				0B7F899D22F696C30019E850 /* NSButton+WebCache.m in Sources */,
 				0B7F890422F567040019E850 /* GZViewModel.m in Sources */,
 				0BCEB0EC22FB24730033BA67 /* SVProgressHUD.m in Sources */,
@@ -1103,6 +1142,7 @@
 				0B7F89AE22F696C30019E850 /* UIImage+MemoryCacheCost.m in Sources */,
 				0B7F898F22F696C30019E850 /* UIImage+Transform.m in Sources */,
 				0B7F88FE22F54DC60019E850 /* GZParameters.m in Sources */,
+				0BF359142307A39D00CC8035 /* PMViewController.m in Sources */,
 				0B7F890C22F584770019E850 /* GZModelRect.m in Sources */,
 				0B7F898822F696C30019E850 /* SDAnimatedImageView+WebCache.m in Sources */,
 				0B7F89D622F9C3A40019E850 /* GZDetailHeaderView.m in Sources */,
